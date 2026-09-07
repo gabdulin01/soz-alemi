@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Қазақша және ағылшынша сөздерді сурет пен дыбыс арқылы үйренуге арналған балалар ойыны.">
+  <title>Сөз әлемі — Talking Pictures</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sun-shape" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#"><span>С</span> Сөз әлемі</a>
+    <div class="header-tools">
+      <div class="language-switch" role="group" aria-label="Тілді таңда">
+        <button class="lang-button active" data-lang="kk" type="button">ҚАЗ</button>
+        <button class="lang-button" data-lang="en" type="button">ENG</button>
+      </div>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Дыбысты өшіру">🔊</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker" id="kicker">СУРЕТТЕР СӨЙЛЕЙДІ</p>
+        <h1 id="heroTitle">Көр, тыңда,<br><em>үйрен!</em></h1>
+        <p id="heroDescription">Суретті бас — сөзді тыңда. Қазақша және ағылшынша жаңа сөздерді ойын арқылы есте сақта.</p>
+        <div class="hero-badges">
+          <span>16 <small id="wordBadge">сөз</small></span>
+          <span>2 <small id="languageBadge">тіл</small></span>
+          <span>4 <small id="topicBadge">тақырып</small></span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="bubble bubble-one">Hello!</div>
+        <div class="hero-animal sprite sprite-lion"></div>
+        <div class="bubble bubble-two">Сәлем!</div>
+      </div>
+    </section>
+
+    <section class="learning-panel">
+      <div class="panel-top">
+        <div>
+          <p class="kicker" id="chooseKicker">ТАҚЫРЫПТЫ ТАҢДА</p>
+          <h2 id="sectionTitle">Қай сөздерді үйренеміз?</h2>
+        </div>
+        <div class="mode-switch" role="group" aria-label="Ойын режимі">
+          <button class="mode-button active" data-mode="learn" type="button"><span>👀</span> <b id="learnMode">Үйрену</b></button>
+          <button class="mode-button" data-mode="quiz" type="button"><span>🎯</span> <b id="quizMode">Тап</b></button>
+        </div>
+      </div>
+
+      <nav class="categories" id="categories" aria-label="Тақырыптар"></nav>
+
+      <div class="quiz-banner" id="quizBanner" hidden>
+        <button id="playQuestion" type="button" aria-label="Сөзді қайта тыңдау">🔊</button>
+        <div><small id="listenLabel">ТЫҢДА ДА, ТАП</small><strong id="quizPrompt">Қай сурет айтылды?</strong></div>
+        <span class="score"><b id="score">0</b> ⭐</span>
+      </div>
+
+      <div class="card-grid" id="cardGrid"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <footer><span>Сөз әлемі</span><p id="footerText">Кішкентай қадам — үлкен білім.</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
